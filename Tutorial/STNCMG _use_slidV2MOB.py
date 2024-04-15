@@ -16,7 +16,7 @@ from STNCMG import Mix_STNCMG
 from Train import train_STNCMG
 from Mix_adj import Transfer_pytorch_Data, Mix_adj, mclust_R
 
-input_dir = 'F://DATA//小鼠嗅球//Slide-seqV2'
+input_dir = '/home/szh/upload/STAGATE01/slide2_MOB/'
 counts_file = os.path.join(input_dir, 'Puck_200127_15.digital_expression.txt')
 coor_file = os.path.join(input_dir, 'Puck_200127_15_bead_locations.csv')
 #reading data
