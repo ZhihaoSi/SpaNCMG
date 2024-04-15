@@ -18,7 +18,7 @@ from Mix_adj import Transfer_pytorch_Data, Mix_adj, mclust_R
 
 from sklearn.metrics.cluster import adjusted_rand_score
 
-adata = sc.read_h5ad('/home/szh/upload/STAGATE01/osmFISH/osmFISH_cortex.h5ad')#5328 cell 33 genes
+adata = sc.read_h5ad('/home/szh/upload/DATA/osmFISH/osmFISH_cortex.h5ad')#5328 cell 33 genes
 
 layer_num_dict = {
     'Pia Layer 1':1,
