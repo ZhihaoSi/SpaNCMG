@@ -18,7 +18,7 @@ from Mix_adj import Transfer_pytorch_Data, Mix_adj, mclust_R
 
 from sklearn.metrics.cluster import adjusted_rand_score
 
-adata = sc.read_h5ad('F://DATA//小鼠体感觉皮层//osmFISH//osmFISH_cortex.h5ad')#5328 cell 33 genes
+adata = sc.read_h5ad('/home/szh/upload/STAGATE01/osmFISH/osmFISH_cortex.h5ad')#5328 cell 33 genes
 
 layer_num_dict = {
     'Pia Layer 1':1,
@@ -43,7 +43,7 @@ sc.pp.highly_variable_genes(adata, flavor="seurat_v3", n_top_genes=3000)
 sc.pp.normalize_total(adata, target_sum=1e4)
 sc.pp.log1p(adata)
 Mix_adj(adata, k_cutoff=6,rad_cutoff=500)
-adata = train_STNCMG(adata,n_epochs=200)
+adata = train_STNCMG(adata,n_epochs=450)
 
 
 sc.pp.neighbors(adata, use_rep='STNCMG')
