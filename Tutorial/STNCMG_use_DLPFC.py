@@ -20,7 +20,7 @@ from Mix_adj import Transfer_pytorch_Data, Mix_adj, mclust_R
 
 section_id = '151675'
 print('Current slice %s'%(section_id))
-input_dir = os.path.join('F://DATA//DLPFC', section_id) 
+input_dir = os.path.join('/home/szh/upload/DATA/DLPFC', section_id) 
 adata = sc.read_visium(path=input_dir, count_file='filtered_feature_bc_matrix.h5')
 adata.var_names_make_unique()
 #data preprocessing
@@ -29,7 +29,7 @@ sc.pp.normalize_total(adata, target_sum=1e4)
 sc.pp.log1p(adata)
 
 #Original drawing
-Ann_df = pd.read_csv(os.path.join('F://DATA//DLPFC', section_id, section_id+'_truth.txt'), sep='\t', header=None, index_col=0)
+Ann_df = pd.read_csv(os.path.join('/home/szh/upload/DATA/DLPFC', section_id, section_id+'_truth.txt'), sep='\t', header=None, index_col=0)
 Ann_df.columns = ['Ground Truth']
 adata.obs['Ground Truth'] = Ann_df.loc[adata.obs_names, 'Ground Truth']
 plt.rcParams["figure.figsize"] = (3, 3)
