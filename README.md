@@ -18,7 +18,7 @@ Fig. 1. The overall workflow of STNCMG. (a) Data preprocessing and the construct
 - sklearn=1.1.1
 - scipy=1.9.1
 ## Tutorial
-Detailed instructions are provided in the Tutorial folder. Please refer to the [STNCMG_DLPFC.ipynb] (https://github.com/ZhihaoSi/STNCMG/blob/main/Tutorial/STNCMG_DLPFC.ipynb) file for details.
+Detailed instructions are provided in the Tutorial folder. Please refer to the [STNCMG_DLPFC.ipynb](https://github.com/ZhihaoSi/STNCMG/blob/main/Tutorial/STNCMG_DLPFC.ipynb) file for details.
 
 
 
