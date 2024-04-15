@@ -19,8 +19,8 @@ import ot
 
 
 # the number of clusters
-n_clusters = 22 # E9.5 22 E14.5 16
-file_path = './Mouse_embryo/'
+n_clusters = 22 # E9.5 22 
+file_path = ''/home/szh/upload/DATA/Mouse_embryo/'
 adata = sc.read_h5ad(file_path +'E9.5_E1S1.MOSTA.h5ad' )
 adata.var_names_make_unique()
 
