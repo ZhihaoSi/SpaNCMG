@@ -19,7 +19,7 @@ from STNCMG import Mix_STNCMG
 from Train import train_STNCMG
 from Mix_adj import Transfer_pytorch_Data, Mix_adj, mclust_R
 
-inpath='F://DATA//小鼠嗅球//Stereo-seq//Dataset1_LiuLongQi_MouseOlfactoryBulb'
+inpath='/home/szh/upload/DATA/Stereoseq_MOB'
 counts_file = os.path.join(inpath,'RNA_counts.tsv')
 coor_file = os.path.join(inpath,'position.tsv')
 
