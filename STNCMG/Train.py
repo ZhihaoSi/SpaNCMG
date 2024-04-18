@@ -127,14 +127,12 @@ def train_STNCMG(adata, hidden_dims=[512, 30], n_epochs=1000, lr=0.001,key_added
     else:
         adata_Vars = adata
 
-    if verbose:
-        print('Size of Input: ', adata_Vars.shape)
-
-    if 'label_CSL' not in adata.obsm.keys():
-        add_contrastive_label(adata)
-       
-    if 'feat' not in adata.obsm.keys():
-        get_feature(adata)    
+    if 'Spatial_Net' not in adata.uns.keys():
+        raise ValueError("Construct two kinds of spatial neighborhood network first!")
+      
+    print('Size of Input: ', adata_Vars.shape)
+    add_contrastive_label(adata)
+    get_feature(adata) 
     
     features = torch.FloatTensor(adata.obsm['feat'].copy()).to(device)
     features_a = torch.FloatTensor(adata.obsm['feat_a'].copy()).to(device)
