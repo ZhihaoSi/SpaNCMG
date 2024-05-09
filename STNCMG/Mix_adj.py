@@ -97,7 +97,7 @@ def Mix_adj(adata, rad_cutoff=None, k_cutoff=None):
     adata.uns['Spatial_Net'] = Spatial_Net
 
 
-def mclust_R(adata, num_cluster, modelNames='EEE', used_obsm='STNCMG', random_seed=2023):
+def mclust_R(adata, num_cluster, modelNames='EEE', used_obsm='SpaNCMG', random_seed=2023):
 
     from sklearn.decomposition import KernelPCA
     kpca = KernelPCA(n_components=20)
